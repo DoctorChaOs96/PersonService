@@ -10,9 +10,7 @@ namespace PersonService
     {
         public static void AddDalServices(this IServiceCollection services)
         {
-            services.AddDbContext<PersonServiceDbContext>();
             services.AddScoped<IRepository<PersonEntity>, DefaultRepository<PersonEntity>>();
-            services.AddScoped<IRepository<UserEntity>, UserRepository>();
         }
     }
 }

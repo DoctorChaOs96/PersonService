@@ -5,8 +5,18 @@ namespace PesonService.DAL.Entity
     public class PersonEntity : BaseEntity
     {
         [MaxLength(50)]
-        public string Name { get; set; } = string.Empty;
+        [Required]
+        public string FirstName { get; set; } = string.Empty;
 
-        public int Age { get; set; }
+        [MaxLength(50)]
+        [Required]
+        public string LastName { get; set; } = string.Empty;
+
+        [Required]
+        public DateTime BirthDate { get; set; }
+
+        public byte[] Avatar { get; set; }
+
+        public byte[] Resume { get; set; }
     }
 }

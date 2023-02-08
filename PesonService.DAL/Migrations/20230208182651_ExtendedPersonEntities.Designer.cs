@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PesonService.DAL;
 
@@ -11,9 +12,11 @@ using PesonService.DAL;
 namespace PesonService.DAL.Migrations
 {
     [DbContext(typeof(PersonServiceDbContext))]
-    partial class PersonServiceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230208182651_ExtendedPersonEntities")]
+    partial class ExtendedPersonEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

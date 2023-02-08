@@ -10,7 +10,6 @@ namespace PersonService
         {
             services.AddScoped<IPersonService, BLL.Service.PersonService>();
             services.AddScoped<IDateTimeProvider, DateTimeProvider>();
-            services.AddScoped<IUserService, UserService>();
 
             services.AddDalServices();
         }
