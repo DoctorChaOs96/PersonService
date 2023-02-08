@@ -12,8 +12,8 @@ using PesonService.DAL;
 namespace PesonService.DAL.Migrations
 {
     [DbContext(typeof(PersonServiceDbContext))]
-    [Migration("20230208182651_ExtendedPersonEntities")]
-    partial class ExtendedPersonEntities
+    [Migration("20230208185218_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

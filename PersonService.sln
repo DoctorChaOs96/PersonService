@@ -5,8 +5,6 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PesonService.DAL", "PesonService.DAL\PesonService.DAL.csproj", "{0F7BA78F-CF2A-40CC-9CD6-12B774BD2772}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonService.BLL", "PersonService.BLL\PersonService.BLL.csproj", "{4D4CA1CF-C2DF-4DC4-9FA7-7D4F7217C562}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonService.Common", "PersonService.Common\PersonService.Common.csproj", "{94A36BF5-1FE7-43DA-9895-B9FE5B2E32E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonService.MVC", "PersonService.MVC\PersonService.MVC.csproj", "{92739859-7207-4A39-ABE2-01540CF8442B}"
@@ -23,10 +21,6 @@ Global
 		{0F7BA78F-CF2A-40CC-9CD6-12B774BD2772}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F7BA78F-CF2A-40CC-9CD6-12B774BD2772}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F7BA78F-CF2A-40CC-9CD6-12B774BD2772}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4D4CA1CF-C2DF-4DC4-9FA7-7D4F7217C562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D4CA1CF-C2DF-4DC4-9FA7-7D4F7217C562}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D4CA1CF-C2DF-4DC4-9FA7-7D4F7217C562}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D4CA1CF-C2DF-4DC4-9FA7-7D4F7217C562}.Release|Any CPU.Build.0 = Release|Any CPU
 		{94A36BF5-1FE7-43DA-9895-B9FE5B2E32E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{94A36BF5-1FE7-43DA-9895-B9FE5B2E32E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94A36BF5-1FE7-43DA-9895-B9FE5B2E32E7}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -7,6 +7,5 @@ namespace PersonService.BLL.Contract
     {
         bool IsValidUser(string userName, string password);
         bool HasAccessPoint(string userName, AccessPoint accessPoint);
-        Task<Guid> Create(UserDto user, CancellationToken cancellationToken);
     }
 }

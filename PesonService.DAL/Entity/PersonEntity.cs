@@ -15,8 +15,8 @@ namespace PesonService.DAL.Entity
         [Required]
         public DateTime BirthDate { get; set; }
 
-        public byte[] Avatar { get; set; }
+        public byte[]? Avatar { get; set; }
 
-        public byte[] Resume { get; set; }
+        public byte[]? Resume { get; set; }
     }
 }

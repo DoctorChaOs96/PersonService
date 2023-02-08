@@ -29,7 +29,6 @@ namespace PesonService.DAL.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<byte[]>("Avatar")
-                        .IsRequired()
                         .HasColumnType("image");
 
                     b.Property<DateTime>("BirthDate")
@@ -52,7 +51,6 @@ namespace PesonService.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<byte[]>("Resume")
-                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.HasKey("Id");

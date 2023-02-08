@@ -23,4 +23,8 @@
     <ProjectReference Include="..\PersonService.Common\PersonService.Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

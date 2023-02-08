@@ -7,7 +7,6 @@ namespace PesonService.DAL
     {
         public PersonServiceDbContext(DbContextOptions<PersonServiceDbContext> dbContextOptions) : base(dbContextOptions)
         {
-            Database.Migrate();
         }
 
         public DbSet<PersonEntity> Persons { get; set; }

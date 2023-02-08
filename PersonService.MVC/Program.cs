@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using PersonService.Common;
 using PersonService.MVC.Data;
 using PesonService.DAL;
 
@@ -28,6 +27,8 @@ namespace PersonService.MVC
                 .AddEntityFrameworkStores<IdentityDbContext>();
 
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDalServices();
 
             var app = builder.Build();
 
