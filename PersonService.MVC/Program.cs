@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using PersonService.MVC.Data;
 using PesonService.DAL;
 
 namespace PersonService.MVC
@@ -12,19 +11,17 @@ namespace PersonService.MVC
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            var identityConnStr = builder.Configuration.GetConnectionString("IdentityDbConnection") ?? throw new InvalidOperationException("Connection string 'IdentityDbConnection' not found.");
+            var identityConnStr = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'IdentityDbConnection' not found.");
+            builder.Services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(identityConnStr));
 
-            builder.Services.AddDbContext<IdentityDbContext>(options => options.UseSqlServer(identityConnStr));
-
-            var dataConnStr = builder.Configuration.GetConnectionString("DataDbConnection") ?? throw new InvalidOperationException("Connection string 'DataDbConnection' not found.");
-
-            builder.Services.AddDbContext<PersonServiceDbContext>(options => options.UseSqlServer(dataConnStr));
+            //builder.Services.AddDbContextFactory<DefaultDbContext>(options =>
+            //    options.UseSqlServer()
 
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
             builder.Services
                 .AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<IdentityDbContext>();
+                .AddEntityFrameworkStores<DefaultDbContext>();
 
             builder.Services.AddControllersWithViews();
 

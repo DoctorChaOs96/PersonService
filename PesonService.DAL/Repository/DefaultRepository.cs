@@ -5,11 +5,11 @@ namespace PesonService.DAL.Repository
 {
     public class DefaultRepository<T> : IRepository<T> where T : class, IEntity
     {
-        private readonly PersonServiceDbContext _dbContext;
+        private readonly DefaultDbContext _dbContext;
 
         protected DbSet<T> Table => _dbContext.Set<T>();
 
-        public DefaultRepository(PersonServiceDbContext dbContext)
+        public DefaultRepository(DefaultDbContext dbContext)
         {
             _dbContext = dbContext;
         }
